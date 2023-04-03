@@ -1,0 +1,26 @@
+import 'dart:ui';
+
+const darkColor = Color(0xff1E323F);
+const blueColor = Color(0XFF008EEF);
+const darkBlue = Color(0XFF001343);
+const enumPurple = Color(0xff142E70);
+const enumGrey = Color(0XFF1E323F);
+const arrowbackColor = Color(0XFF475661);
+const kPrimaryColor = Color(0xff008EEF);
+const enumBackgroundColor = Color(0XFFF5F7F8);
+const enumGrey1 = Color(0xff9CABB5);
+const enumGrey2 = Color(0xff475661);
+const grey3 = Color(0xff9CABB5);
+const grey4 = Color(0xffD0DCE4);
+const enumGrey6 = Color(0xffF2F2F2);
+const primaryColor = Color(0xff1C8AEC);
+const enumSuccessGreen = Color(0xff0BCA7A);
+const enumCrispGreen = Color(0xff0C8B99);
+const enumErrorRed = Color(0xffFF2E2E);
+const Gray2 = Color(0xff4F4F4F);
+const enumPurple4 = Color(0xffAB75F8);
+const enumPurple5 = Color(0xffFAF7FF);
+const enumlightSkyblue = Color(0xffEEF8FF);
+const enumBlue5 = Color(0XFFF6FCFF);
+const enumBlue3 = Color(0XFF80E0FF);
+const enumlightgray = Color(0XffFBFBFB);
