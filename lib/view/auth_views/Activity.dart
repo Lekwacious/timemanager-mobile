@@ -82,7 +82,7 @@ class _ActivityViewState extends State<ActivityView> {
                             ),
                           ),
                           Text(
-                            "ID",
+                            "Date",
                             style: GoogleFonts.ibmPlexSerif(
                               fontWeight: FontWeight.w600,
                               letterSpacing: -.5,
@@ -142,7 +142,8 @@ class _ActivityViewState extends State<ActivityView> {
                                                       ActivityDetailsPage(
                                                           snapshot
                                                               .data!
-                                                              .response[index].id,
+                                                              .response[index]
+                                                              .id,
                                                           snapshot
                                                               .data!
                                                               .response[index]
@@ -181,21 +182,24 @@ class _ActivityViewState extends State<ActivityView> {
                                                                       index]
                                                                   .title !=
                                                               null
-                                                          ? Text(
-                                                              snapshot
-                                                                  .data!
-                                                                  .response[
-                                                                      index]
-                                                                  .title,
-                                                              style: GoogleFonts
-                                                                  .ibmPlexSerif(
-                                                                fontWeight:
-                                                                    FontWeight
-                                                                        .w600,
-                                                                letterSpacing:
-                                                                    -.5,
-                                                                color: darkBlue,
-                                                                fontSize: 11,
+                                                          ? Flexible(
+                                                              child: Text(
+                                                                snapshot
+                                                                    .data!
+                                                                    .response[
+                                                                        index]
+                                                                    .title,
+                                                                style: GoogleFonts
+                                                                    .ibmPlexSerif(
+                                                                  fontWeight:
+                                                                      FontWeight
+                                                                          .w600,
+                                                                  letterSpacing:
+                                                                      -.5,
+                                                                  color:
+                                                                      darkBlue,
+                                                                  fontSize: 11,
+                                                                ),
                                                               ),
                                                             )
                                                           : Container(),
@@ -205,87 +209,93 @@ class _ActivityViewState extends State<ActivityView> {
                                                                       index]
                                                                   .description !=
                                                               null
-                                                          ? Text(
-                                                              snapshot
-                                                                  .data!
-                                                                  .response[
-                                                                      index]
-                                                                  .description,
-                                                              style: GoogleFonts
-                                                                  .ibmPlexSerif(
-                                                                fontWeight:
-                                                                    FontWeight
-                                                                        .w600,
-                                                                letterSpacing:
-                                                                    -.5,
-                                                                color: darkBlue,
-                                                                fontSize: 11,
+                                                          ? Flexible(
+                                                              child: Text(
+                                                                snapshot
+                                                                    .data!
+                                                                    .response[
+                                                                        index]
+                                                                    .description,
+                                                                textAlign:TextAlign.left,
+                                                                style: GoogleFonts
+                                                                    .ibmPlexSerif(
+                                                                  fontWeight:
+                                                                      FontWeight
+                                                                          .w600,
+                                                                  letterSpacing:
+                                                                      -.5,
+                                                                  color:
+                                                                      darkBlue,
+                                                                  fontSize: 11,
+                                                                ),
                                                               ),
                                                             )
                                                           : Container(),
-                                                      Text(
-                                                        snapshot
-                                                            .data!
-                                                            .response[index]
-                                                            .idNumber,
-                                                        style: GoogleFonts
-                                                            .ibmPlexSerif(
-                                                          fontWeight:
-                                                              FontWeight.w600,
-                                                          letterSpacing: -.5,
-                                                          color: darkBlue,
-                                                          fontSize: 11,
+                                                      Flexible(
+                                                        child: Text(
+                                                          snapshot
+                                                              .data!
+                                                              .response[index]
+                                                              .date,
+                                                          textAlign:TextAlign.right,
+                                                          style: GoogleFonts
+                                                              .ibmPlexSerif(
+                                                            fontWeight:
+                                                                FontWeight.w600,
+                                                            letterSpacing: -.5,
+                                                            color: darkBlue,
+                                                            fontSize: 11,
+                                                          ),
                                                         ),
                                                       ),
-                                                      // Text(
-                                                      //   snapshot
-                                                      //       .data!
-                                                      //       .response[index]
-                                                      //       .date
-                                                      //       .toString(),
-                                                      //   style: GoogleFonts
-                                                      //       .ibmPlexSerif(
-                                                      //     fontWeight:
-                                                      //         FontWeight.w600,
-                                                      //     letterSpacing: -.5,
-                                                      //     color: darkBlue,
-                                                      //     fontSize: 11,
-                                                      //   ),
-                                                      // ),
                                                       TextButton(
-                                                        style: TextButton.styleFrom(
-                                                          backgroundColor: Colors.blue,
-                                                        primary: Colors.white,
-                                                      ),
-                                                          onPressed: () {  Get.to(() =>
-                                                          ActivityDetailsPage(
-                                                              snapshot
-                                                                  .data!
-                                                                  .response[index].id,
-                                                              snapshot
-                                                                  .data!
-                                                                  .response[index].title,
-                                                              snapshot
-                                                                  .data!
-                                                                  .response[index]
-                                                                  .description,
-                                                              snapshot
-                                                                  .data!
-                                                                  .response[index]
-                                                                  .idNumber,
-                                                              snapshot
-                                                                  .data!
-                                                                  .response[index]
-                                                                  .date,
-                                                              snapshot
-                                                                  .data!
-                                                                  .response[index]
-                                                                  .timeStarted,
-                                                              snapshot
-                                                                  .data!
-                                                                  .response[index]
-                                                                  .timeEnded)); },
-                                                      child: const Text("View")),
+                                                          style: TextButton
+                                                              .styleFrom(
+                                                            backgroundColor:
+                                                                Colors.blue,
+                                                            primary:
+                                                                Colors.white,
+                                                          ),
+                                                          onPressed: () {
+                                                            Get.to(() => ActivityDetailsPage(
+                                                                snapshot
+                                                                    .data!
+                                                                    .response[
+                                                                        index]
+                                                                    .id,
+                                                                snapshot
+                                                                    .data!
+                                                                    .response[
+                                                                        index]
+                                                                    .title,
+                                                                snapshot
+                                                                    .data!
+                                                                    .response[
+                                                                        index]
+                                                                    .description,
+                                                                snapshot
+                                                                    .data!
+                                                                    .response[
+                                                                        index]
+                                                                    .idNumber,
+                                                                snapshot
+                                                                    .data!
+                                                                    .response[
+                                                                        index]
+                                                                    .date,
+                                                                snapshot
+                                                                    .data!
+                                                                    .response[
+                                                                        index]
+                                                                    .timeStarted,
+                                                                snapshot
+                                                                    .data!
+                                                                    .response[
+                                                                        index]
+                                                                    .timeEnded));
+                                                          },
+                                                          child: const Text(
+                                                              "View")),
                                                     ],
                                                   ),
                                                 ),
